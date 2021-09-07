@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="description" content="This project is an asynchronous web app that uses Web API and user data to dynamically update the UI for a Weather-Journal App.">
+  <meta name="author" content="Natalia Petrenko">
+  <title>Weather Journal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="app">
+    <div id="user-entry-container">
+      <h1 class="holder headline">
+        Weather Journal App
+      </h1>
+      <div class="holder zip">
+        <label for="zip">Enter city</label>
+        <input type="text" id="zip" placeholder="Enter a city's name or a zip code here, e.g. Sydney or 2000">
+      </div>
+      <div class="holder country-code">
+        <label for="country-code">Enter country code</label>
+        <p>Please, refer to &nbsp;<a href="https://www.iso.org/obp/ui/#search">ISO 3166</a>&nbsp; for the country codes.</p>
+        <input type="text" id="country-code" placeholder="Enter country code here, e.g. AU or fra">
+      </div>
+      <div class="holder feel">
+        <label for="feelings">How are you feeling today?</label>
+        <textarea class="myInput" id="feelings" placeholder="Enter your feelings here" rows="3" cols="50"></textarea>
+        <button id="generate">Generate</button>
+      </div>
+    </div>
+    <div class="entry-results display-none">
+      <div class="title">Most Recent Entry</div>
+      <div id="entryHolder">
+        <div id="date"></div>
+        <div id="temp"></div>
+        <div id="content"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="photo-reference">
+    <div>
+      The  background photo by <a href="http://www.met.reading.ac.uk/~swr04jks/">Jon Shonk</a>
+    </div>
+    <div>
+      &copy Coded by ferdi.flintstone, 2021
+    </div>
+  </footer>
+
+  <script src="app.js" type="text/javascript"></script>
+
+</body>
+</html>
